@@ -1,25 +1,15 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
-const queryIssues = createAsyncThunk(
-  'issues/query',
-  async ( query, thunk ) => {
-    const request = new Request( 'github' );
-    const response = await fetch( request, query );
-    return response.data;
-  }
-)
+import { createSlice } from '@reduxjs/toolkit';
 
 export default createSlice( {
   name: 'issues',
-  initialState: [],
-  reducers: {
-    setIssues( state, action ) {
-
+  initialState: {
+    query: {
+      string: '',
     },
   },
-  extraReducers: {
-    [ queryIssues.fulfilled ]: ( state, action ) => {
-      state = action.payload;
-    }
-  }
+  reducers: {
+    setQuery( state, action ) {
+      state.query = { ...action.payload };
+    },
+  },
 } );

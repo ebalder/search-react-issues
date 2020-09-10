@@ -4,7 +4,6 @@ import 'normalize.css';
 import { Provider } from 'react-redux';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import './index.css';
 import App from './App';
 import Session from './components/Session';
 import store from './store';

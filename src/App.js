@@ -8,6 +8,10 @@ const useStyles = createUseStyles( {
   '@global': {
     body: {
       backgroundColor: '#DBE3DF',
+      margin: 0,
+      fontFamily: `-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif`,
     },
   },
   logIn: {
